@@ -5,3 +5,6 @@ A gRpc development framework, supporting etcd and Consul as the service register
 
 ## examples
 All examples at [go-echool-examples](https://github.com/echool/go-echool-examples).
+
+## TODO
+- Add Service Mesh integration

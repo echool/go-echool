@@ -2,7 +2,6 @@ package consul
 
 import (
 	"fmt"
-	"log"
 	"time"
 
 	"github.com/echool/go-echool/config"
@@ -52,13 +51,12 @@ func (r *Resolver) watch() {
 	config.Token = r.token
 	client, err := api.NewClient(config)
 	if err != nil {
-		log.Fatalf("error create consul client: %v\n", err)
+		panic(err)
 	}
 
 	for {
 		services, metainfo, err := client.Health().Service(r.name, "", true, &api.QueryOptions{WaitIndex: r.lastIndex})
 		if err != nil {
-			fmt.Printf("error retrieving instances from consul: %v", err)
 			time.Sleep(time.Second * 5)
 			continue
 		}

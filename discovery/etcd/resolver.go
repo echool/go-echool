@@ -102,12 +102,10 @@ func (r *Resolver) watch(keyPrefix string) {
 //
 // It could be called multiple times concurrently.
 func (r *Resolver) ResolveNow(opt resolver.ResolveNowOption) {
-
 }
 
 // It's just a hint, resolver can ignore this if it's not necessary.
 func (r *Resolver) Close() {
-
 }
 
 func (r *Resolver) exist(l []resolver.Address, addr string) bool {
