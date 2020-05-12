@@ -1,6 +1,6 @@
 module github.com/echool/go-echool
 
-go 1.13
+go 1.14
 
 require (
 	github.com/coreos/bbolt v1.3.3 // indirect
